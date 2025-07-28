@@ -27,10 +27,10 @@ pipeline {
     stages {
         stage('Get the version') {
             steps {
-                script{
-                    def packageJson = readJSON file 'package.json'
+                script {
+                    def packageJson = readJSON file: 'package.json'
                     packageVersion = packageJson.version
-                    echo "application version : $packageVersion"
+                    echo "application version: $packageVersion"
                 }
                
             }
